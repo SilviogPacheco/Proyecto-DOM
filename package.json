@@ -1,0 +1,20 @@
+{
+  "name": "proyecto-dom",
+  "version": "1.0.0",
+  "description": "Este proyecto muestra la implementación de los conocimientos básicos adquiridos de HTML, CSS y JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilviogPacheco/Proyecto-DOM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilviogPacheco/Proyecto-DOM/issues"
+  },
+  "homepage": "https://github.com/SilviogPacheco/Proyecto-DOM#readme"
+}

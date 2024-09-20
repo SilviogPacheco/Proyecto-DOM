@@ -1,0 +1,88 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencias de Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Compilaciones
+dist/
+build/
+out/
+temp/
+*.exe
+*.out
+*.app
+*.dmg
+
+# Directorios de caché
+.cache/
+.vscode/
+.idea/
+.sass-cache/
+coverage/
+*.stackdump
+.vscode/
+*.log
+
+# IDE y editores
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+*.vscode/
+
+# Archivos relacionados a sistemas operativos
+*.DS_Store
+*.Thumbs.db
+
+# Archivos relacionados a Git
+*.patch
+*.diff
+*.orig
+*.gitmodules
+!.gitignore
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de Java
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+
+# Archivos de configuración de macOS
+*.DS_Store
+
+# Archivos de configuración de Linux
+*.lock
+
+# Archivos de configuración de Windows
+*.dll
+*.exe
+
+# Otros
+*.bak
+*.tmp
+*.log
