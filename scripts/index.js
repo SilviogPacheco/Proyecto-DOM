@@ -35,7 +35,7 @@ class Repository {
 const repository = new Repository();
 
 function createActivityCard(activity) {
-  const { id, title, description, imgUrl } = activity;
+  const { title, description, imgUrl } = activity;
 
   const cardDiv = document.createElement("div");
   const titleElement = document.createElement("h3");
@@ -66,3 +66,29 @@ function addContainer() {
   const cards = activities.map((ele) => createActivityCard(ele));
   cards.forEach((elem) => container.appendChild(elem));
 }
+
+function handler() {
+  const titleInput = document.getElementById("title-input");
+  const descriptionInput = document.getElementById("description-input");
+  const imgUrlInput = document.getElementById("imgUrl-input");
+
+  const title = titleInput.value.trim();
+  const description = descriptionInput.value.trim();
+  const imgUrl = imgUrlInput.value.trim();
+
+  if (!title || !description || !imgUrl) {
+    alert("Por favor, completa todos los campos.");
+    return;
+  }
+
+  repository.addActivity(title, description, imgUrl);
+
+  addContainer();
+
+  titleInput.value = "";
+  descriptionInput.value = "";
+  imgUrlInput.value = "";
+}
+
+const addButton = document.getElementById("add-activity-button");
+addButton.addEventListener("click", handler);
