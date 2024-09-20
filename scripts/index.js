@@ -35,9 +35,10 @@ class Repository {
 const repository = new Repository();
 
 function createActivityCard(activity) {
-  const { title, description, imgUrl } = activity;
+  const { id, title, description, imgUrl } = activity;
 
   const cardDiv = document.createElement("div");
+  cardDiv.dataset.id = id;
   const titleElement = document.createElement("h3");
   const descriptionElement = document.createElement("p");
   const imgElement = document.createElement("img");
@@ -64,7 +65,15 @@ function addContainer() {
   const activities = repository.getActivities();
 
   const cards = activities.map((ele) => createActivityCard(ele));
-  cards.forEach((elem) => container.appendChild(elem));
+  cards.forEach((elem) => {
+    container.appendChild(elem);
+
+    elem.addEventListener("click", () => {
+      const activityId = parseInt(elem.dataset.id);
+      repository.deleteActivity(activityId);
+      addContainer();
+    });
+  });
 }
 
 function handler() {
@@ -82,7 +91,6 @@ function handler() {
   }
 
   repository.addActivity(title, description, imgUrl);
-
   addContainer();
 
   titleInput.value = "";
