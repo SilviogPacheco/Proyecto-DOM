@@ -57,3 +57,12 @@ function createActivityCard(activity) {
 
   return cardDiv;
 }
+
+function addContainer() {
+  const container = document.getElementById("activities-container");
+  container.innerHTML = "";
+  const activities = repository.getActivities();
+
+  const cards = activities.map((ele) => createActivityCard(ele));
+  cards.forEach((elem) => container.appendChild(elem));
+}
